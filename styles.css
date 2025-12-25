@@ -64,15 +64,20 @@ ul, ol { margin-left: 20px; }
 
 /* ===== Print Styles ===== */
 @media print {
+  /* Remove backgrounds & distractions */
   body {
     background: white;
     color: black;
-    margin: 0;
+    margin: 0.5in;
+    font-size: 12pt;
+    line-height: 1.5;
   }
 
+  /* Hide non-essential elements */
   .instagram,
-  .tags {
-    display: none;
+  .tags,
+  a[href^="http"]::after {
+    display: none !important;
   }
 
   a {
@@ -80,11 +85,44 @@ ul, ol { margin-left: 20px; }
     text-decoration: none;
   }
 
-  h1, h2 {
-    page-break-after: avoid;
+  /* Headings formatting */
+  h1 {
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 0.2in;
+  }
+  h2 {
+    font-size: 14pt;
+    margin-top: 0.25in;
   }
 
+  /* Lists and steps */
   ul, ol {
+    margin-left: 0.25in;
+    margin-bottom: 0.25in;
+  }
+
+  /* Tip boxes */
+  .tip-box {
+    border-left: 5px solid black;
+    background: none;
+    padding: 10px;
+    margin-top: 0.25in;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    background: #ccc;
+    color: black;
+    font-size: 0.75rem;
+  }
+
+  /* Page break control */
+  h1, h2, ul, ol {
     page-break-inside: avoid;
   }
 }
