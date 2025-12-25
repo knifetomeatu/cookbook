@@ -88,6 +88,8 @@ button {
     line-height: 1.5 !important;
   }
 
+  h1::after {
+    content: "👉 @knifetomeat.u 👈"
   /* Hide non-essential elements */
   .instagram,
   .tags,
