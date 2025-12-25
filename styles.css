@@ -92,7 +92,11 @@ button {
     display: none !important;
     visibility: hidden !important;
   }
-
+  .no-print {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
   /* Convert remaining links to plain text */
   a {
     color: black !important;
