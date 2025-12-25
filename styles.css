@@ -129,16 +129,7 @@ button {
     margin-bottom: 0.2in !important;
     page-break-after: avoid !important
   }
-h1::after {
-    content: "👉 @knifetomeat.u 👈"
-    display: block;
-    font-size: 0.9rem;
-    font-weight: normal;
-    martin-top 0.2in;
-    color: #ff9090;
-    font-style: bold;
-    text-alisn: center;
-  }
+
   h2 {
     font-size: 14pt !important;
     margin-top: 0.25in !important;
