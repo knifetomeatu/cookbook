@@ -1,25 +1,143 @@
-/* Links */
+/* ===== Base Layout ===== */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #fafafa;
+  line-height: 1.6;
+}
+
+h1 { text-align: center; }
+h2 { margin-top: 30px; }
+
 a {
-  color: #ff9090;
+  color: #ff9090; /* updated color */
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Tip box border */
+ul, ol { margin-left: 20px; }
+
+/* ===== Instagram CTA ===== */
+.instagram {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ===== Tags ===== */
+.tags {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.tag {
+  display: inline-block;
+  background: #eee;
+  color: #333;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* ===== Tip Boxes ===== */
 .tip-box {
   background: #ffffff;
   padding: 20px;
   border-radius: 8px;
   margin-top: 25px;
-  border-left: 5px solid #ff9090;  /* changed */
+  border-left: 5px solid #ff9090; /* updated color */
 }
 
-/* Print Button */
+/* ===== Badges ===== */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 6px 6px 6px 0;
+  border-radius: 20px;
+  background: #eee;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* ===== Print Recipe Button ===== */
 button {
-  padding:10px 20px;
-  background:#ff9090; /* changed */
-  color:white;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
+  padding: 10px 20px;
+  background: #ff9090; /* updated color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  /* General layout */
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0.5in !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Hide non-essential elements */
+  .instagram,
+  .tags,
+  button,
+  .instagram-link,
+  a[href^="http"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Convert remaining links to plain text */
+  a {
+    color: black !important;
+    text-decoration: none !important;
+    pointer-events: none !important;
+  }
+
+  /* Headings formatting */
+  h1 {
+    font-size: 18pt !important;
+    text-align: center;
+    margin-bottom: 0.2in !important;
+  }
+  h2 {
+    font-size: 14pt !important;
+    margin-top: 0.25in !important;
+  }
+
+  /* Lists and steps */
+  ul, ol {
+    margin-left: 0.25in !important;
+    margin-bottom: 0.25in !important;
+  }
+
+  /* Tip boxes */
+  .tip-box {
+    border-left: 5px solid black !important;
+    background: none !important;
+    padding: 10px !important;
+    margin-top: 0.25in !important;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-block !important;
+    padding: 4px 8px !important;
+    margin: 2px !important;
+    border-radius: 12px !important;
+    background: #ccc !important;
+    color: black !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Page break control */
+  h1, h2, ul, ol {
+    page-break-inside: avoid !important;
+  }
 }
