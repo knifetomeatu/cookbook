@@ -30,6 +30,13 @@ ul, ol { margin-left: 20px; }
   margin: 20px 0;
 }
 
+/* ===== Print-only Instagram replacement ===== */
+.instagram-print {
+  text-align: center;
+  margin: 20px 0;
+  display none;
+}
+
 /* ===== Tags ===== */
 .tags {
   text-align: center;
@@ -87,29 +94,24 @@ button {
     font-size: 12pt !important;
     line-height: 1.5 !important;
   }
-
-  h1::after {
-    content: "👉 @knifetomeat.u 👈"
-    display: block;
-    font-size: 0.9rem;
-    font-weight: normal;
-    martin-top 0.2in;
-    color: #ff9090
-    font-style: bold;
-    text-alisn: center;
-  }
   
   /* Hide non-essential elements */
-  .instagram,
+  .instagram-link,
   .tags,
   button,
-  .instagram-link,
-  a[href^="http"] {
+  .no-print {
     display: none !important;
     visibility: hidden !important;
   }
-  .no-print {
-    display: none !important;
+  
+  /* Show print-only Instagram handle */
+  .instagram-print {
+    display: block !important;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    martin-top: 0.2in;
+    color: #ff9090;
     visibility: hidden !important;
   }
   
@@ -126,6 +128,16 @@ button {
     text-align: center;
     margin-bottom: 0.2in !important;
     page-break-after: avoid !important
+  }
+h1::after {
+    content: "👉 @knifetomeat.u 👈"
+    display: block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    martin-top 0.2in;
+    color: #ff9090;
+    font-style: bold;
+    text-alisn: center;
   }
   h2 {
     font-size: 14pt !important;
