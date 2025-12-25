@@ -114,11 +114,12 @@ button {
     font-size: 18pt !important;
     text-align: center;
     margin-bottom: 0.2in !important;
+    page-break-after: avoid !important
   }
   h2 {
     font-size: 14pt !important;
     margin-top: 0.25in !important;
-    page-break-before: always !important;
+    page-break-before: auto !important;
     page-break-inside: avoid !important;
   }
 
@@ -134,6 +135,7 @@ button {
     background: none !important;
     padding: 10px !important;
     margin-top: 0.25in !important;
+    page-break-inside: avoid !important;
   }
 
   /* Badges */
